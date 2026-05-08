@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful House Scene</title>
+
+  <style>
+    body{
+      margin:0;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      background:#f2f2f2;
+    }
+
+    .scene{
+      width:750px;
+      height:450px;
+      background:linear-gradient(to bottom, #87ceeb 70%, #4caf50 30%);
+      border:3px solid #444;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* Sun */
+    .sun{
+      width:90px;
+      height:90px;
+      background:orange;
+      border-radius:50%;
+      position:absolute;
+      top:40px;
+      right:60px;
+      box-shadow:0 0 30px yellow;
+    }
+
+    /* Clouds */
+    .cloud{
+      width:100px;
+      height:50px;
+      background:white;
+      border-radius:50px;
+      position:absolute;
+    }
+
+    .cloud::before,
+    .cloud::after{
+      content:"";
+      position:absolute;
+      background:white;
+      border-radius:50%;
+    }
+
+    .cloud::before{
+      width:50px;
+      height:50px;
+      top:-20px;
+      left:15px;
+    }
+
+    .cloud::after{
+      width:60px;
+      height:60px;
+      top:-25px;
+      right:15px;
+    }
+
+    .cloud1{
+      top:60px;
+      left:80px;
+    }
+
+    .cloud2{
+      top:100px;
+      left:250px;
+    }
+
+    /* House */
+    .house{
+      width:220px;
+      height:160px;
+      background:#ffcc80;
+      position:absolute;
+      bottom:80px;
+      left:50%;
+      transform:translateX(-50%);
+      border:3px solid #5d4037;
+    }
+
+    /* Roof */
+    .roof{
+      width:0;
+      height:0;
+      border-left:130px solid transparent;
+      border-right:130px solid transparent;
+      border-bottom:100px solid #8e24aa;
+      position:absolute;
+      top:-100px;
+      left:-20px;
+    }
+
+    /* Door */
+    .door{
+      width:50px;
+      height:85px;
+      background:#6d4c41;
+      position:absolute;
+      bottom:0;
+      left:85px;
+      border-radius:8px 8px 0 0;
+    }
+
+    /* Windows */
+    .window{
+      width:45px;
+      height:45px;
+      background:#90caf9;
+      border:3px solid #333;
+      position:absolute;
+      top:40px;
+    }
+
+    .left-window{
+      left:25px;
+    }
+
+    .right-window{
+      right:25px;
+    }
+
+    /* Tree */
+    .tree-trunk{
+      width:25px;
+      height:90px;
+      background:#6d4c41;
+      position:absolute;
+      bottom:80px;
+      left:120px;
+    }
+
+    .tree-leaves{
+      width:90px;
+      height:90px;
+      background:darkgreen;
+      border-radius:50%;
+      position:absolute;
+      bottom:140px;
+      left:88px;
+    }
+
+    /* Flowers */
+    .flower{
+      width:15px;
+      height:15px;
+      background:pink;
+      border-radius:50%;
+      position:absolute;
+      bottom:40px;
+    }
+
+    .f1{ left:500px; }
+    .f2{ left:530px; background:yellow; }
+    .f3{ left:560px; background:red; }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="scene">
+
+    <div class="sun"></div>
+
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+
+    <!-- Tree -->
+    <div class="tree-trunk"></div>
+    <div class="tree-leaves"></div>
+
+    <!-- House -->
+    <div class="house">
+
+      <div class="roof"></div>
+
+      <div class="window left-window"></div>
+      <div class="window right-window"></div>
+
+      <div class="door"></div>
+
+    </div>
+
+    <!-- Flowers -->
+    <div class="flower f1"></div>
+    <div class="flower f2"></div>
+    <div class="flower f3"></div>
+
+  </div>
+
+</body>
+</html>
